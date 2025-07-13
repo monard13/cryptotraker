@@ -1,0 +1,5 @@
+{
+  "name": "Crypto Asset Tracker",
+  "description": "A Progressive Web App to track cryptocurrency buy/sell operations, and BRL and asset movements.",
+  "requestFramePermissions": []
+}
