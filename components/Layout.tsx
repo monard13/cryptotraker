@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -30,7 +29,7 @@ const Sidebar: React.FC<{ isOpen: boolean; onToggle: () => void; }> = ({ isOpen,
                 <ul>
                     {navItems.map(item => (
                         <li key={item.to}>
-                            <NavLink 
+                            <NavLink
                                 to={item.to}
                                 style={({ isActive }) => isActive ? activeStyle : undefined}
                                 className={`${baseStyle} ${!isOpen ? 'justify-center' : ''}`}
@@ -71,7 +70,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             {/* Sidebar */}
             {/* Mobile: fixed with transform. Desktop: part of the flex flow */}
             <div className={`
-                fixed top-0 left-0 h-full z-40 
+                fixed top-0 left-0 h-full z-40
                 md:relative md:z-auto
                 transform transition-transform ease-in-out duration-300
                 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
