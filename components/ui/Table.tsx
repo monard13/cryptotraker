@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface TableProps<T> {
@@ -10,11 +9,11 @@ interface TableProps<T> {
 function Table<T,>({ headers, data, renderRow }: TableProps<T>) {
   return (
     <div className="overflow-x-auto bg-gray-800 rounded-lg shadow">
-      <table className="w-full text-sm text-left text-gray-300">
+      <table className="min-w-full text-sm text-left text-gray-300">
         <thead className="text-xs text-gray-400 uppercase bg-gray-700">
           <tr>
             {headers.map((header) => (
-              <th key={header} scope="col" className="px-6 py-3">
+              <th key={header} scope="col" className="px-6 py-3 whitespace-nowrap">
                 {header}
               </th>
             ))}
